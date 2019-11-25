@@ -61,7 +61,6 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 
-# require 'pry'
 def all_supplies_in_holidays(holiday_hash)
   y = []
   i = 0
@@ -78,7 +77,15 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
+  x = []
+  holiday_hash.each do |sea, hol|
+     hol.each do |hol, ite|
+      ite.each do |bbq|
+          if bbq == "BBQ"
+          x << hol
+          end 
+      end 
+  end 
+  return x
+  end 
 
-end
