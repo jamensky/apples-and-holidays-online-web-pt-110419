@@ -85,6 +85,7 @@ def all_holidays_with_bbq(holiday_hash)
           x << hol
           end
       end
+    end 
   end
   return x
   end
