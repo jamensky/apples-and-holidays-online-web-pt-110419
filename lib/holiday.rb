@@ -69,13 +69,12 @@ def all_supplies_in_holidays(holiday_hash)
   while x.length > i
     holiday_hash.each do|sea, hol|
       if sea == x[i]
-        y << "#{sea.to_s.capitalize}:"
-        hol.each {|hol, item| y << "  #{hol.to_s.gsub(/[_]/, ' ').split.map(&:capitalize).join(' ')}: #{item.join(", ")}"}
+        puts "#{sea.to_s.capitalize}:"
+        hol.each {|hol, item| puts "  #{hol.to_s.gsub(/[_]/, ' ').split.map(&:capitalize).join(' ')}: #{item.join(", ")}"}
         i += 1
       end
     end
   end
-  return y
 end
 
 def all_holidays_with_bbq(holiday_hash)
